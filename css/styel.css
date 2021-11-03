@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --mainfont:font-family: 'Raleway', sans-serif;
+    --subfont:font-family: 'Open Sans', sans-serif;
+    --parafont:font-family: 'Cardo', serif;
+    --brand:#e84545;
+    --overlay:rgba(232, 69, 69, 0.9);
+    --brandoverlay:rgba(43, 46, 74, 0.95);
+    --headcolor:#2d3033;
+    --paracolor:#6c7279; 
+    --backcolor:#3a3e64;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.group{
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* =======================
+common css ends
+========================== */
+
+
+nav{
+    /* background-color: #86dfb3; */
+   
+    background-color: #f1f1f1f1;
+}
+.nav-fix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background: #313031;
+}
+nav .navber ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav .navber ul li a{
+    line-height: 50px;
+    text-transform: uppercase;
+    padding: 0 20px;
+    color: #222;
+}
+/* ========================
+        nav css ends
+=========================== */
+
+#banner .banner-item{
+    position: relative;
+    z-index: 1;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#banner .banner-item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background:rgba(143, 102, 102, 0.4);
+    position: absolute;
+    inset: 0;
+    z-index: -1; 
+}
+
+#banner .bg1{
+    background: url(../images/bg1.jpg) no-repeat center /cover;
+    
+}
+
+#banner .bg2{
+    background: url(../images/bg2.jpg) no-repeat center /cover;
+}
+
+#banner .bg3{
+    background: url(../images/bg3.jpg) no-repeat center /cover;
+}
+
+#banner h3{
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#banner h1{
+    font-size: 56px;
+    color: #fff;
+}
+
+#banner .left-arrow{
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    font-size: 24px;
+    color: steelblue;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+#banner .right-arrow{
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    font-size: 24px;
+    color: steelblue;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+
+
+/* .image-slider .item img{
+    width: 100%;
+}
+/* ==============
+image css ends
+================= */
+
+#person{
+    height: 600px;
+    background: url(../images/baner-bg.jpg) no-repeat center  /cover;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+#person .person{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* z-index: 999;  */
+}
+
+#person::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.6);
+    position: absolute;
+    inset: 0;
+    z-index: -2; 
+}
+ 
+  #person .person-image{
+    width: 400px;
+    /* height: 300px; */
+    padding: 50px 0px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+}  
+
+ #person .person-image .person-item{
+    margin-top: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#person .person-image .person-item .person-overlay{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    transform: scale(0.7);
+    background-color:rgba(255,255,255,0.5);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+}
+
+
+#person .person-image .person-item img{
+    transform:scale(0.7);
+    width: 100%;
+}
+
+#person .person-image .person-item.slick-center img{
+    transform: scale(1);
+
+} 
+
+#person .person-image .person-item.slick-center .person-overlay{
+    transform: scale(1); 
+    display: none;  
+} 
+
+#person .person-image .slick-dots{
+    display: flex;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    bottom: -50px;
+}
+
+#person .person-image .slick-dots li{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #dc965a;
+    border-radius: 50%;
+    margin: 15px 5px;
+    cursor: pointer;
+}
+
+#person .person-image .slick-dots li.slick-active{
+    background:#dc965a;
+}
+#person .person-image .slick-dots li:last-child{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #dc965a;
+    border-radius: 50%;
+    margin-right: 0;
+}
+
+#person .person-image .slick-dots li button{
+    font-size: 0;
+    border: 0;
+    outline: none;
+}
+   
+/* =================
+ person img css ends
+====================*/
+
+
+.person-text{
+    width: 600px;
+    padding: 50px 0;
+    margin-left: 50%;
+    transform: translate(-50%);        
+}
+
+.person-text .text-item{
+    background: #f1f1f1f1;
+    height: 200px;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+
+.person-text .text-item .text-item1{
+    position: relative;
+}
+
+/* .person-text .text-item .text-item1::after{
+    content: '';
+    height: 40px;
+    width: 40px;
+    background: #e72929;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    -o-transform:translateX(-50%);
+    bottom: -30px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    z-index: 9999;
+    visibility: visible;
+} */
+
+.person-text .text-item p{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    color: #555555;
+    margin-top: 20px;   
+}
+
+.person-text .text-item i{
+    padding-top: 30px;
+     box-sizing: border-box;
+    color: #744fa0;
+    text-align: center;
+}
+
+.person-text .text-item h4{
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    line-height: 20px;
+    color: #353535; 
+    text-transform: capitalize;
+    margin-top: 5px;  
+}
+
+.person-text .text-item h6{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    color: #353535; 
+    text-transform: capitalize;
+    margin-top: 5px;  
+}
+/* =================
+person-text css ends
+======================*/
+
+
+
+ #feedback-bg{
+    height: 380px;
+    background: #f1f1f1;
+}
+
+ #feedback-bg .feedback{
+    height: 380px;
+    position: relative;
+}
+
+#feedback-bg .feedback .feedback-image {
+    width: 530px;
+    display: flex;
+}
+#feedback-bg .feedback .feedback-image{
+    margin-top: 100px;
+}
+#feedback-bg .feedback .feedback-image .image-item{
+    width: 145px;
+    position: relative;
+}
+#feedback-bg .feedback .image-item img{
+    width: 114px;
+    height: 138px;
+    border: 3px solid #dc965a;
+}
+
+ #feedback-bg .feedback .feedback-image .text-item{
+    width: 355px;
+    position: relative;
+ }
+
+ #feedback-bg .feedback .feedback-image .text-item p{
+    color: #5e6472;
+    font-family: "Nunito",monospac;
+    line-height: 1.7;
+    font-size: 16px;
+    font-weight: 400;
+ }
+ #feedback-bg .feedback .feedback-image .text-item h6{
+    font-size: 15px;
+    font-weight: 600;
+    color: #1c1d24;
+    margin-top: 10px;
+ }
+
+ #feedback-bg .feedback .feedback-image .ratting-value{
+    width: 50px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #fff;
+    border-radius: 30px;
+    padding: 0 10px;
+    box-shadow: 1px 1px 1px 1px rgb(28 29 36 / 10%);
+    font-size: 9px;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    outline: none;
+ }
+
+ #feedback-bg .feedback .feedback-image .ratting-value i{
+    color: #ffc800;
+    margin-right: 3px;
+    line-height: 18px;
+    font-size: 10px;
+ }
+
+ #feedback-bg .feedback .feedback-image .ratting-value span{
+    font-size: 10px;
+    color: #5e6472;
+ }
+
+ #feedback-bg .feedback .slick-dots{
+    display: flex;
+    position: absolute;
+    left:45%;
+    bottom: -90px;
+    transform: translate(-50%);
+}
+
+#feedback-bg .feedback .slick-dots li{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #dc965a;
+    border-radius: 50%;
+    margin: 15px 5px;
+    cursor: pointer;
+}
+
+#feedback-bg .feedback .slick-dots li.slick-active{
+    background:#dc965a;
+}
+
+#feedback-bg .feedback .slick-dots li:last-child{
+    margin-right: 0;
+}
+ #feedback-bg .feedback .slick-dots li button{
+    font-size: 0;
+    border: 0;
+    outline: none;
+}
+ 
+/* =================
+feedback css ends
+======================*/
